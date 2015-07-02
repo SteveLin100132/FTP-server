@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+	<meta charset='utf-8' />
+	<link rel='stylesheet/less' type='text/css' href='CSS/main.less' />
+
+	<!-- <script type='text/javascript' src='JS/ftp-server.js'></script> -->
+	<script type='text/javascript' src='JS/framework/less.js'></script>
+	<script type='text/javascript' src='JS/framework/jquery.js'></script>
+	<script type='text/javascript' src='JS/definition/main/main.js'></script>
+	<title>STEVE-FTP</title>
+</head>
+
+<body>
+	<div class='app-container'>
+		<div class='top-panel'>
+			<div class='ctrl-btn close-btn'></div>
+			<div class='ctrl-btn minimize-btn'></div>
+		</div>
+
+		<form>
+			<img class='logo' src='icons/logo.png' height='180' />
+			<input type='text' class='textfield textfield-host' placeholder='Host Name' data-placeholder='Host Name' />
+			<input type='password' class='textfield textfield-password' placeholder='Password' data-placeholder='Password' />
+			<div class='folder-block'>
+				<div class='select-button'></div>
+				<div class='folder-path'>Choose the root folder</div>
+				<input type='file' class='folder-select' webkitdirectory nwdirectory />
+			</div>
+			<div class='launch-button'>LAUNCH</div>
+		</form>
+
+		<p class='copyright'>Copyright © 2015 Digital Life Lab. All rights reserved</p>
+	</div>
+
+	<script type='text/javascript'>
+		app.init();
+		app.launchFTP('.launch-button');
+		app.minimize('.minimize-btn');
+		app.close('.close-btn');
+	</script>
+</body>
+</html>

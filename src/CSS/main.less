@@ -1,0 +1,176 @@
+/* Import other less */
+@import 'global-variables.less';
+
+/* LESS Document */
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: '微軟正黑體';
+    -webkit-app-region: drag;
+    // -webkit-app-region: no-drag;
+
+    .app-container {
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 325px;
+        height: 590px;
+        position: absolute;
+        background-color: @dark;
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+
+        .top-panel {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            position: absolute;
+
+            .ctrl-btn {
+                opacity: 0.5;
+                float: right;
+                width: 30px;
+                height: 50px;
+                cursor: pointer;
+                background-size: 15px;
+                background-repeat: no-repeat;
+                -webkit-app-region: no-drag;
+                .transition-duration(300ms);
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            .minimize-btn {
+                background-position: 50% 50%;
+                background-image: url(../icons/minimize.svg);
+            }
+
+            .close-btn {
+                margin-right: 10px;
+                background-position: 50% 50%;
+                background-image: url(../icons/close.svg);
+            }
+        }
+
+        form {
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            .transform(translateY(-50%));
+
+            .textfield {
+                width: 190px;
+                height: 35px;
+                border: none;
+                outline: none;
+                margin-top: 10px;
+                padding-left: 40px;
+                color: #B0B7C2;
+                background-color: transparent;
+                border-bottom: 1px solid rgb(65,79,98);
+                background-size: 20px;
+                background-repeat: no-repeat;
+                background-position: 10px 50%;
+                -webkit-app-region: no-drag;
+            }
+
+            .textfield-host {
+                margin-top: 35px;
+                background-image: url(../icons/host-name.svg);
+            }
+
+            .textfield-password {
+                background-image: url(../icons/password.svg);
+            }
+
+            .folder-block {
+                top: 10px;
+                width: 190px;
+                height: 35px;
+                margin: 0 auto;
+                padding-left: 40px;
+                position: relative;
+                border-bottom: 1px solid rgb(65,79,98);
+
+                .select-button {
+                    z-index: 0;
+                    top: 0px;
+                    left: 0px;
+                    width: 35px;
+                    height: 100%;
+                    cursor: pointer;
+                    position: absolute;
+                    background-size: 20px;
+                    background-repeat: no-repeat;
+                    background-position: 10px 50%;
+                    background-image: url(../icons/folder.svg);
+                }
+
+                .folder-path {
+                    top: 0;
+                    right: 0;
+                    width: 190px;
+                    height: 100%;
+                    overflow: hidden;
+                    color: #B0B7C2;
+                    font-size: 14px;
+                    text-align: left;
+                    line-height: 35px;
+                    position: absolute;
+                }
+
+                .folder-select {
+                    z-index: 1;
+                    opacity: 0;
+                    top: -20px;
+                    left: 0px;
+                    width: 100%;
+                    height: 35px;
+                    cursor: pointer;
+                    margin-top: 20px;
+                    position: absolute;
+                    -webkit-app-region: no-drag;
+                }
+            }
+
+            .launch-button {
+                width: 235px;
+                height: 50px;
+                margin: 10px auto;
+                margin-top: 35px;
+                position: relative;
+                line-height: 50px;
+                font-size: 18px;
+                letter-spacing: 5px;
+                cursor: pointer;
+                color: rgb(65,79,98);
+                background-color: @green;
+                -webkit-app-region: no-drag;
+
+                &:hover {
+                    color: @green;
+                    background-color: rgba(255,255,255,0.7);
+                }
+
+                &:active {
+                    box-shadow: 0px 1px 2px rgba(0,0,0,0.5) inset;
+                }
+            }
+        }
+
+        .copyright {
+            bottom: 10px;
+            left: -10%;
+            width: 120%;
+            position: absolute;
+            color: rgba(255,255,255,0.4);
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+}

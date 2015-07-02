@@ -1,0 +1,21 @@
+{
+	"name": "STEVE-FTP",
+	"description": "This application create a FTP server",
+	"version": "v0.1.1",
+	"main": "src/main.html",
+	"window": {
+		"show": true,
+		"frame": false,
+		"toolbar": false,
+		"resizable": false,
+		"transparent": true,
+		"position": "center",
+		"icon": "src/icons/STEVEFTP.png",
+		"width": 350,
+		"height": 600,
+		"min_width": 350,
+		"min_height": 600,
+		"max_width": 350,
+		"max_height": 600
+	}, "single-instance": false
+}

@@ -1,0 +1,127 @@
+/* Decoration */
+@dark: rgb(43,62,84);
+@green: rgb(0,154,154);
+
+/* Function */
+.selection(@color: #ffffff, @background: #000000) {
+	*::selection {
+		color:@color;
+		background-color:@background
+	}
+
+	*::-o-selection {
+		color:@color;
+		background-color:@background
+	}
+
+	*::-ms-selection {
+		color:@color;
+		background-color:@background
+	}
+
+	*::-moz-selection {
+		color:@color;
+		background-color:@background
+	}
+
+	*::-webkit-selection {
+		color:@color;
+		background-color:@background
+	}
+}
+
+.animation(@name: animate, @duration: 1s, @timing: linear, @count: infinite) {
+	animation:@name @duration @timing @count;
+	-o-animation:@name @duration @timing @count;
+	-ms-animation:@name @duration @timing @count;
+	-moz-animation:@name @duration @timing @count;
+	-webkit-animation:@name @duration @timing @count;
+}
+
+.animation-delay(@delay: 0s) {
+	animation-delay: @delay;
+	-o-animation-delay: @delay;
+	-ms-animation-delay: @delay;
+	-moz-animation-delay: @delay;
+	-webkit-animation-delay: @delay;
+}
+
+.backface-visibility(@attr: hidden) {
+	backface-visibility:@attr;
+	-o-backface-visibility:@attr;
+	-ms-backface-visibility:@attr;
+	-moz-backface-visibility:@attr;
+	-webkit-backface-visibility:@attr;
+}
+
+.perspective(@value: 0) {
+	perspective:@value;
+	-o-perspective:@value;
+	-ms-perspective:@value;
+	-moz-perspective:@value;
+	-webkit-perspective:@value;
+}
+
+.perspective-origin(@origin: 0% 0%) {
+	perspective-origin:@origin;
+	-o-perspective-origin:@origin;
+	-ms-perspective-origin:@origin;
+	-moz-perspective-origin:@origin;
+	-webkit-perspective-origin:@origin;
+}
+
+.transform(@rotate: rotateZ(0deg)) {
+	transform:@rotate;
+	-o-transform:@rotate;
+	-ms-transform:@rotate;
+	-moz-transform:@rotate;
+	-webkit-transform:@rotate;
+}
+
+.transform-origin(@origin: 0% 0% 0px) {
+	transform-origin:@origin;
+	-o-transform-origin:@origin;
+	-ms-transform-origin:@origin;
+	-moz-transform-origin:@origin;
+	-webkit-transform-origin:@origin;
+}
+
+.transform-style(@style: preserve-3d) {
+	transform-style:@style;
+	-o-transform-style:@style;
+	-ms-transform-style:@style;
+	-moz-transform-style:@style;
+	-webkit-transform-style:@style;
+}
+
+.transition(@effect: linear) {
+	transition:@effect;
+	-o-transition:@effect;
+	-ms-transition:@effect;
+	-moz-transition:@effect;
+	-webkit-transition:@effect;
+}
+
+.transition-duration(@time: 500ms) {
+	transition-duration:@time;
+	-o-transition-duration:@time;
+	-ms-transition-duration:@time;
+	-moz-transition-duration:@time;
+	-webkit-transition-duration:@time;
+}
+
+.transition-timing(@type: linear) {
+	transition-timing-function:@type;
+	-o-transition-timing-function:@type;
+	-ms-transition-timing-function:@type;
+	-moz-transition-timing-function:@type;
+	-webkit-transition-timing-function:@type;
+}
+
+.transition-delay (@delay: 0ms) {
+	transition-delay:@delay;
+	-o-transition-delay:@delay;
+	-ms-transition-delay:@delay;
+	-moz-transition-delay:@delay;
+	-webkit-transition-delay:@delay;
+}
